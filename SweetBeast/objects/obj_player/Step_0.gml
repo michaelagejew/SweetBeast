@@ -9,7 +9,7 @@ if (instance_place(x, y, obj_ladder)) {
 }
 else {
 	climbing = false
-	sprite_index = spr_player 
+	//sprite_index = spr_player 
 }
 
 if(climbing) {
@@ -30,17 +30,26 @@ if(climbing) {
 }
 
 else {
+	
 	//Controls
+	move = false
 	if (keyboard_check(vk_up)) and (instance_place(x, y+1, obj_block)){
 		vspeed = -jump_height
 	}
 	if (keyboard_check(vk_right)) and !instance_place(x+walk_speed, y, obj_block){
 		x = x + walk_speed
-		image_xscale = 1
+		image_xscale=-1;
+		move = true
 	}
 	if (keyboard_check(vk_left) and !instance_place(x-walk_speed, y, obj_block)){
 		x = x-walk_speed
-		image_xscale = -1
+		image_xscale=1;
+		move = true
+	}
+	if (!move){
+		sprite_index = spr_player // If we're not moving, we want the default sprite
+	} else{
+		sprite_index = spr_playermove
 	}
 	
 	// Gravity: no gravity if block underneath, gravity otherwise
