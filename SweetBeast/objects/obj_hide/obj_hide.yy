@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_hide",
   "spriteId": {
-    "name": "spr_temphide",
-    "path": "sprites/spr_temphide/spr_temphide.yy",
+    "name": "spr_hide",
+    "path": "sprites/spr_hide/spr_hide.yy",
   },
   "solid": false,
   "visible": true,

@@ -6,7 +6,7 @@
     "name": "spr_tempwalls",
     "path": "sprites/spr_tempwalls/spr_tempwalls.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
