@@ -71,3 +71,11 @@ else {
 		visible=true
 	}
 }
+
+if ++day {
+	countdown = 120
+}
+
+if obj_gameManager.countdown <= 0 {
+	game_end()
+}
